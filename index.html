@@ -9,11 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <!-- Animate.css para efeitos extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Cores principais */
         .bg-brand-black { background-color: #18181b; }
         .text-brand-black { color: #18181b; }
         .border-brand-black { border-color: #18181b; }
@@ -21,8 +24,52 @@
         .text-brand-gray { color: #3f3f46; }
         .border-brand-gray { border-color: #3f3f46; }
         .shadow-brand { box-shadow: 0 10px 15px -3px rgba(31, 41, 55, 0.10), 0 4px 6px -2px rgba(31, 41, 55, 0.05); }
-        .gradient-bg {
-            background-image: linear-gradient(135deg, rgba(31,41,55,0.07), rgba(55,65,81,0.03));
+
+        /* Gradiente animado no fundo dos Benefícios */
+        .animated-bg {
+            background: radial-gradient(circle at 25% 60%, #8b5cf6 0%, #fafafa 100%);
+            background-size: 200% 200%;
+            animation: bgmove 8s ease-in-out infinite alternate;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Card Lift + Glow no hover */
+        .hover-lift-glow {
+            transition: all 0.22s cubic-bezier(0.4, 0.2, 0.3, 1.06);
+        }
+        .hover-lift-glow:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 16px 32px -8px #6366f1cc;
+            border-color: #6366f1;
+            z-index: 2;
+        }
+
+        /* Pulse e brilho pro botão principal */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(139,92,246,0.5);}
+            70% { box-shadow: 0 0 0 14px rgba(139,92,246,0);}
+            100% { box-shadow: 0 0 0 0 rgba(139,92,246,0);}
+        }
+        .animate-pulse-bright:hover {
+            animation: pulse 1s;
+            transform: scale(1.03);
+            background: linear-gradient(90deg, #18181b 80%, #8b5cf6 100%);
+            box-shadow: 0 10px 30px -8px #6366f1cc;
+            transition: transform 0.2s, background 0.35s;
+        }
+
+        /* Bounce icones */
+        .icon-bounce {
+            animation: bounce-in 0.9s;
+        }
+        @keyframes bounce-in {
+            0% { transform: scale(0.7); opacity: 0.3; }
+            40% { transform: scale(1.2); opacity: 1; }
+            70% { transform: scale(0.9);}
+            100% { transform: scale(1);}
         }
     </style>
 </head>
@@ -30,24 +77,19 @@
 
     <!-- Container Principal -->
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-                
+
         <!-- Header -->
-        <header class="grid grid-cols-1 sm:grid-cols-3 items-center mb-12 sm:mb-16 gap-4">
-            <!-- Coluna Esquerda - Logo Connect -->
+        <header class="grid grid-cols-1 sm:grid-cols-3 items-center mb-12 sm:mb-16 gap-4" data-aos="fade-down">
             <div class="flex items-center gap-4 justify-center sm:justify-start">
-                <img src="0e0336f829c74002af80bad1c9aa5e4e.png" alt="Logo Connect Assessoria" class="h-16">
+                <img src="0e0336f829c74002af80bad1c9aa5e4e.png" alt="Logo Connect Assessoria" class="h-16 icon-bounce">
                 <div>
                     <h1 class="text-2xl font-bold text-brand-black">Proposta Comercial</h1>
                     <p class="text-brand-gray">Connect Assessoria – Assessoria de Seguros</p>
                 </div>
             </div>
-            
-            <!-- Coluna Central - Espaço para imagem institucional -->
             <div class="flex justify-center">
-                <img src="Cópia de Perfil Alfa (2).png" alt="Institucional Connect" class="w-36 h-36 rounded-xl border border-gray-200">
+                <img src="Cópia de Perfil Alfa (2).png" alt="Institucional Connect" class="w-36 h-36 rounded-xl border border-gray-200 icon-bounce">
             </div>
-            
-            <!-- Coluna Direita - Data -->
             <div class="text-center sm:text-right">
                 <p class="text-sm text-gray-500">Data: 04 de Novembro de 2025</p>
                 <p class="text-sm text-brand-black font-semibold">#PropostaConnect2025</p>
@@ -56,7 +98,7 @@
 
         <main>
             <!-- Seção Objetivo -->
-            <section class="text-center mb-16">
+            <section class="text-center mb-16" data-aos="zoom-in">
                 <h2 class="text-3xl font-extrabold text-brand-black mb-4">Nosso Objetivo</h2>
                 <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
                    Consolidar a presença online da Connect através da construção de um Site Institucional e de uma Nova Gestão de Redes Sociais.
@@ -65,12 +107,12 @@
 
             <!-- Serviços e Soluções -->
             <section class="mb-16">
-                <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10">Escopo do Projeto</h2>
+                <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10" data-aos="fade-up">Escopo do Projeto</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200 hover-lift-glow" data-aos="fade-right" data-aos-delay="100">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="bg-gray-100 text-brand-black p-3 rounded-full">
+                            <div class="bg-gray-100 text-brand-black p-3 rounded-full icon-bounce">
                                 <i data-lucide="shield" class="w-6 h-6"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional</h3>
@@ -89,10 +131,10 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border-2 border-brand-black relative">
-                          <div class="absolute top-0 right-8 -mt-3 bg-brand-black text-white px-3 py-1 text-sm font-bold rounded-full">MAIS POPULAR</div>
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border-2 border-brand-black relative hover-lift-glow" data-aos="zoom-out" data-aos-delay="200">
+                        <div class="absolute top-0 right-8 -mt-3 bg-brand-black text-white px-3 py-1 text-sm font-bold rounded-full animate__animated animate__pulse animate__infinite">MAIS POPULAR</div>
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="bg-brand-black text-white p-3 rounded-full">
+                            <div class="bg-brand-black text-white p-3 rounded-full icon-bounce">
                                 <i data-lucide="rocket" class="w-6 h-6"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional e Gestão de Redes Sociais + AtendeSEG</h3>
@@ -112,9 +154,9 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200 hover-lift-glow" data-aos="fade-left" data-aos-delay="300">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="bg-brand-black text-white p-3 rounded-full">
+                            <div class="bg-brand-black text-white p-3 rounded-full icon-bounce">
                                 <i data-lucide="users" class="w-6 h-6"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-brand-black">Gestão de Redes Sociais</h3>
@@ -132,15 +174,15 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Benefícios Exclusivos -->
-            <section class="mb-16 gradient-bg p-8 sm:p-12 rounded-2xl">
+            <section class="mb-16 gradient-bg animated-bg p-8 sm:p-12 rounded-2xl" data-aos="fade-up">
                 <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10">Benefícios Exclusivos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Card 1 -->
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200">
+                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200 hover-lift-glow" data-aos="fade-right" data-aos-delay="150">
                         <div class="flex items-center gap-4 mb-3">
-                             <i data-lucide="gift" class="w-8 h-8 text-brand-black"></i>
+                            <i data-lucide="gift" class="w-8 h-8 text-brand-black icon-bounce"></i>
                             <h3 class="text-xl font-bold text-brand-black">2 Horas Bônus de Consultoria</h3>
                         </div>
                         <p class="text-gray-700">Acelere resultados com:</p>
@@ -150,9 +192,9 @@
                         </ul>
                     </div>
                     <!-- Card 2 -->
-                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200">
+                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200 hover-lift-glow" data-aos="fade-left" data-aos-delay="250">
                         <div class="flex items-center gap-4 mb-3">
-                             <i data-lucide="sparkle" class="w-8 h-8 text-brand-black"></i>
+                            <i data-lucide="sparkle" class="w-8 h-8 text-brand-black icon-bounce"></i>
                             <h3 class="text-xl font-bold text-brand-black">Diferenciais Alfanexus</h3>
                         </div>
                         <p class="text-gray-700">Parceria completa:</p>
@@ -164,27 +206,31 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Contato -->
-            <section class="mt-20 text-center">
+            <section class="mt-20 text-center" data-aos="zoom-in">
                 <h2 class="text-2xl font-bold text-brand-black">Prontos para começar?</h2>
                 <p class="max-w-xl mx-auto text-gray-700 mt-2 mb-8">
                     Estamos à disposição para esclarecer qualquer dúvida e avançar na parceria!
                 </p>
-                <a href="https://wa.me/5582981452122?text=Olá!%0ARecebi%20a%20proposta%20comercial%20da%20Connect%20Assessoria%20e%20gostaria%20de%20dar%20o%20próximo%20passo!" target="_blank" class="bg-brand-black hover:bg-brand-gray text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-brand">
+                <a href="https://wa.me/5582981452122?text=Olá!%0ARecebi%20a%20proposta%20comercial%20da%20Connect%20Assessoria%20e%20gostaria%20de%20dar%20o%20próximo%20passo!"
+                   target="_blank"
+                   class="bg-brand-black hover:bg-brand-gray text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-brand animate-pulse-bright">
                     Dar o próximo passo
                 </a>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="text-center mt-16">
+        <footer class="text-center mt-16" data-aos="fade-up">
             <p class="text-gray-500 text-sm">Connect Assessoria de Seguros & Alfanexus Tecnologia</p>
         </footer>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         lucide.createIcons();
+        AOS.init();
     </script>
 </body>
 </html>
