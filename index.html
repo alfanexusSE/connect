@@ -1,69 +1,190 @@
-<!-- Serviços e Soluções -->
-<section class="mb-16">
-    <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10">Escopo do Projeto</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
-            <div class="flex items-center gap-4 mb-4">
-                <div class="bg-gray-100 text-brand-black p-3 rounded-full">
-                    <i data-lucide="shield" class="w-6 h-6"></i>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial – Connect Assessoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Cores principais */
+        .bg-brand-black { background-color: #18181b; }
+        .text-brand-black { color: #18181b; }
+        .border-brand-black { border-color: #18181b; }
+        .bg-brand-gray { background-color: #3f3f46; }
+        .text-brand-gray { color: #3f3f46; }
+        .border-brand-gray { border-color: #3f3f46; }
+        .shadow-brand { box-shadow: 0 10px 15px -3px rgba(31, 41, 55, 0.10), 0 4px 6px -2px rgba(31, 41, 55, 0.05); }
+        .gradient-bg {
+            background-image: linear-gradient(135deg, rgba(31,41,55,0.07), rgba(55,65,81,0.03));
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <!-- Container Principal -->
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+                
+        <!-- Header -->
+        <header class="grid grid-cols-1 sm:grid-cols-3 items-center mb-12 sm:mb-16 gap-4">
+            <!-- Coluna Esquerda - Logo Connect -->
+            <div class="flex items-center gap-4 justify-center sm:justify-start">
+                <img src="logo-connect.png" alt="Logo Connect Assessoria" class="h-16">
+                <div>
+                    <h1 class="text-2xl font-bold text-brand-black">Proposta Comercial</h1>
+                    <p class="text-brand-gray">Connect Assessoria – Assessoria de Seguros</p>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional</h3>
             </div>
-            <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Landing Page Instituiconal Completa</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Geração de Leads Já Qualificados</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>SEO Otimizado</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Disponibilidade em Todas as Plataformas</span></li>
-            </ul>
-            <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
-                <p class="text-gray-500 text-sm font-semibold mb-2">Desenvolvimento do Site (pagamento único em até 5x no Cartão)</p>
-                <p class="text-2xl font-bold text-brand-black mb-4">R$ 2.200,00</p>
-                <p class="text-gray-500 text-sm font-semibold mb-2">Manutenção Mensal de Domínio e Site</p>
-                <p class="text-2xl font-bold text-brand-black mb-2">R$ 149,90</p>
+            
+            <!-- Coluna Central - Espaço para imagem institucional -->
+            <div class="flex justify-center">
+                <img src="img-destaque.png" alt="Institucional Connect" class="w-36 h-36 rounded-xl border border-gray-200">
             </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border-2 border-brand-black relative">
-              <div class="absolute top-0 right-8 -mt-3 bg-brand-black text-white px-3 py-1 text-sm font-bold rounded-full">MAIS POPULAR</div>
-            <div class="flex items-center gap-4 mb-4">
-                <div class="bg-brand-black text-white p-3 rounded-full">
-                    <i data-lucide="rocket" class="w-6 h-6"></i>
+            
+            <!-- Coluna Direita - Data -->
+            <div class="text-center sm:text-right">
+                <p class="text-sm text-gray-500">Data: 04 de Novembro de 2025</p>
+                <p class="text-sm text-brand-black font-semibold">#PropostaConnect2025</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Seção Objetivo -->
+            <section class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-brand-black mb-4">Nosso Objetivo</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                   Consolidar a presença online da Connect através da construção de um Site Institucional e de uma Nova Gestão de Redes Sociais.
+                </p>
+            </section>
+
+            <!-- Serviços e Soluções -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10">Escopo do Projeto</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-gray-100 text-brand-black p-3 rounded-full">
+                                <i data-lucide="shield" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Landing Page Instituiconal Completa</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Geração de Leads Já Qualificados</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>SEO Otimizado</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Disponibilidade em Todas as Plataformas</span></li>
+                        </ul>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
+                            <p class="text-gray-500 text-sm font-semibold mb-2">Desenvolvimento do Site (pagamento único em até 5x no Cartão)</p>
+                            <p class="text-2xl font-bold text-brand-black mb-4">R$ 2.200,00</p>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">Manutenção Mensal de Domínio e Site</p>
+                            <p class="text-2xl font-bold text-brand-black mb-2">R$ 149,90</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border-2 border-brand-black relative">
+                          <div class="absolute top-0 right-8 -mt-3 bg-brand-black text-white px-3 py-1 text-sm font-bold rounded-full">MAIS POPULAR</div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-brand-black text-white p-3 rounded-full">
+                                <i data-lucide="rocket" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional e Gestão de Redes Sociais + AtendeSEG</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Tudo do plano Anterior</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Gestão Completa de Instagram</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Criação de Criativos Estáticos e Animados</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>2 Visitas Mensais para Captação de Conteúdos</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Sistema Completo de Centralização de Atendimento com CRM Incluso</span></li>
+                        </ul>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
+                            <p class="text-gray-500 text-sm font-semibold mb-2">Desenvolvimento do Site (pagamento único em até 5x no Cartão)</p>
+                            <p class="text-2xl font-bold text-brand-black mb-4">R$ 1.700,00</p>
+                            <p class="text-gray-500 text-sm font-semibold mb-2">Gestão de Redes Sociais + Manutenção Mensal de Domínio</p>
+                            <p class="text-2xl font-bold text-brand-black mb-2">R$ 1.500,00</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-brand-black text-white p-3 rounded-full">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-brand-black">Gestão de Redes Sociais</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Gestão Completa de Instagram</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Criação de Criativos Estáticos e Animados</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Oportunidades estratégicas de negócios</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>2 Visitas Mensais para Captação de Conteúdos</span></li>
+                        </ul>
+                        <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
+                            <p class="text-gray-500 text-sm font-semibold mb-2">Investimento Mensal</p>
+                            <p class="text-2xl font-bold text-brand-black mb-2">R$ 1.350,00</p>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-black">Construção de Site Institucional e Gestão de Redes Sociais + AtendeSEG</h3>
-            </div>
-            <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Tudo do plano Anterior</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Gestão Completa de Instagram</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Criação de Criativos Estáticos e Animados</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>2 Visitas Mensais para Captação de Conteúdos</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Sistema Completo de Centralização de Atendimento com CRM Incluso</span></li>
-            </ul>
-            <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
-                <p class="text-gray-500 text-sm font-semibold mb-2">Desenvolvimento do Site (pagamento único em até 5x no Cartão)</p>
-                <p class="text-2xl font-bold text-brand-black mb-4">R$ 1.700,00</p>
-                <p class="text-gray-500 text-sm font-semibold mb-2">Gestão de Redes Sociais + Manutenção Mensal de Domínio</p>
-                <p class="text-2xl font-bold text-brand-black mb-2">R$ 1.500,00</p>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-white p-8 rounded-2xl shadow-brand flex flex-col border border-gray-200">
-            <div class="flex items-center gap-4 mb-4">
-                <div class="bg-brand-black text-white p-3 rounded-full">
-                    <i data-lucide="users" class="w-6 h-6"></i>
+            </section>
+            
+            <!-- Benefícios Exclusivos -->
+            <section class="mb-16 gradient-bg p-8 sm:p-12 rounded-2xl">
+                <h2 class="text-3xl font-extrabold text-brand-black text-center mb-10">Benefícios Exclusivos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-3">
+                             <i data-lucide="gift" class="w-8 h-8 text-brand-black"></i>
+                            <h3 class="text-xl font-bold text-brand-black">2 Horas Bônus de Consultoria</h3>
+                        </div>
+                        <p class="text-gray-700">Acelere resultados com:</p>
+                        <ul class="mt-4 space-y-3">
+                            <li class="font-semibold flex items-start gap-2"><span class="text-brand-black">✔</span> Consultoria em marketing e tecnologia</li>
+                            <li class="font-semibold flex items-start gap-2"><span class="text-brand-black">✔</span> Treinamentos operacionais para equipes</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-3">
+                             <i data-lucide="sparkle" class="w-8 h-8 text-brand-black"></i>
+                            <h3 class="text-xl font-bold text-brand-black">Diferenciais Alfanexus</h3>
+                        </div>
+                        <p class="text-gray-700">Parceria completa:</p>
+                        <ul class="mt-4 space-y-3">
+                            <li class="font-semibold flex items-start gap-2"><span class="text-brand-black">✔</span> Reuniões estratégicas periódicas</li>
+                            <li class="font-semibold flex items-start gap-2"><span class="text-brand-black">✔</span> Relatórios transparentes de performance</li>
+                            <li class="font-semibold flex items-start gap-2"><span class="text-brand-black">✔</span> Atendimento ágil e personalizado</li>
+                        </ul>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold text-brand-black">Gestão de Redes Sociais</h3>
-            </div>
-            <ul class="space-y-3 text-gray-700 list-inside mb-6 flex-grow">
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Gestão Completa de Instagram</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Criação de Criativos Estáticos e Animados</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>Oportunidades estratégicas de negócios</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-5 h-5 text-brand-black flex-shrink-0 mt-1"></i><span>2 Visitas Mensais para Captação de Conteúdos</span></li>
-            </ul>
-            <div class="bg-gray-100 p-4 rounded-lg text-center mt-auto">
-                <p class="text-gray-500 text-sm font-semibold mb-2">Investimento Mensal</p>
-                <p class="text-2xl font-bold text-brand-black mb-2">R$ 1.350,00</p>
-            </div>
-        </div>
+            </section>
+            
+            <!-- Contato -->
+            <section class="mt-20 text-center">
+                <h2 class="text-2xl font-bold text-brand-black">Prontos para começar?</h2>
+                <p class="max-w-xl mx-auto text-gray-700 mt-2 mb-8">
+                    Estamos à disposição para esclarecer qualquer dúvida e avançar na parceria!
+                </p>
+                <a href="https://wa.me/5582981452122?text=Olá!%0ARecebi%20a%20proposta%20comercial%20da%20Connect%20Assessoria%20e%20gostaria%20de%20dar%20o%20próximo%20passo!" target="_blank" class="bg-brand-black hover:bg-brand-gray text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-brand">
+                    Dar o próximo passo
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16">
+            <p class="text-gray-500 text-sm">Connect Assessoria de Seguros & Alfanexus Tecnologia</p>
+        </footer>
     </div>
-</section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
